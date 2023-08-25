@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: libmoox-aliases-perl
+Section: perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: perl,
+ debhelper-compat (= 13),
+ libclass-method-modifiers-perl <!nocheck>,
+ libstrictures-perl <!nocheck>,
+ libmoo-perl <!nocheck>,
+ libtest-fatal-perl <!nocheck>,
+ libtest-simple-perl <!nocheck>
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Jonas Smedegaard <dr@jones.dk>
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libmoox-aliases-perl.git
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libmoox-aliases-perl
+Homepage: https://metacpan.org/pod/MooX::Aliases
+Testsuite: autopkgtest-pkg-perl
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libmoox-aliases-perl
+Architecture: all
+Depends: ${misc:Depends},
+ ${perl:Depends},
+ libclass-method-modifiers-perl,
+ libstrictures-perl,
+ libmoo-perl
+Description: easy aliasing of methods and attributes in Moo
+ The MooX::Aliases module will allow you to quickly alias methods in
+ Moo. It provides an alias parameter for has() to generate aliased
+ accessors as well as the standard ones. Attributes can also be
+ initialized in the constructor via their aliased names.

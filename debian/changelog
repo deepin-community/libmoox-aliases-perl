@@ -1,5 +1,43 @@
-template-repository (1.0-1) unstable; urgency=medium
+libmoox-aliases-perl (0.001006-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/*: update URLs from {search,www}.cpan.org to MetaCPAN.
+  * debian/*: update GitHub URLs to use HTTPS.
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+  * Bump debhelper dependency to >= 8, since that's what is used in
+    debian/compat.
+  * Bump debhelper from deprecated 8 to 10.
+  * Set Testsuite header for perl package.
+
+  [ gregor herrmann ]
+  * Convert from cdbs to dh(1) in order to unbreak autopkgtests.
+  * Update debian/watch.
+  * Update debian/upstream/metadata.
+  * autopkgtests: skip use.t.
+  * Set Rules-Requires-Root: no.
+  * Declare compliance with Debian Policy 4.6.0.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 09 Apr 2022 19:25:51 +0200
+
+libmoox-aliases-perl (0.001006-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 01:18:55 +0100
+
+libmoox-aliases-perl (0.001006-1) unstable; urgency=low
+
+  * Initial packaging release.
+    Closes: bug#779242.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 25 Feb 2015 20:48:37 +0100
